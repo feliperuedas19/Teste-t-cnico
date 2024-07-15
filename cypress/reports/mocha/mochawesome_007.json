@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-07-15T02:28:38.458Z",
+    "end": "2024-07-15T02:28:53.000Z",
+    "duration": 14542,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e626179-b889-4427-b3ba-c8f66c224821",
+      "title": "",
+      "fullFile": "cypress\\e2e\\naoPreencherCamposObrigatorios.cy.js",
+      "file": "cypress\\e2e\\naoPreencherCamposObrigatorios.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b01cf162-3b9b-476c-9843-f94c42f4a097",
+          "title": "Adicionar Novo Usuário sem preencher campos obrigatórios",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve verificar a obrigatoriedade dos campos (Nome, Email, Telefone, Data e Empresa)",
+              "fullTitle": "Adicionar Novo Usuário sem preencher campos obrigatórios Deve verificar a obrigatoriedade dos campos (Nome, Email, Telefone, Data e Empresa)",
+              "timedOut": null,
+              "duration": 10954,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[placeholder=\"Nome\"]').as('inputName');\ncy.get('[placeholder=\"Email\"]').as('inputEmail');\ncy.get('[placeholder=\"Telefone\"]').as('inputPhone');\ncy.get('[placeholder=\"Data de nascimento\"]').as('inputBirthdate');\ncy.get('#search_input').as('inputCompany');\ncy.get('@inputEmail').type('meuemaildeteste10@email.com');\ncy.get('@inputPhone').type('12111445577');\ncy.get('@inputBirthdate').type('2000-01-10');\ncy.get('@inputCompany').click();\ncy.get('.optionContainer').contains('li', 'Empresa 1').click();\ncy.get('@inputName').click();\ncy.get('.sc-eCImPb > button').click();\nconst inputs = ['@inputName', '@inputEmail', '@inputPhone', '@inputBirthdate', '@inputCompany'];\ninputs.forEach(alias => {\n  cy.get(alias).clear();\n  cy.isRequired(alias, 'Preencha este campo.');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'Preencha este campo.' to equal ''",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'Preencha este campo.' to equal ''\n    at Context.eval (webpack:///./cypress/support/commands.js:31:35)",
+                "diff": "- 'Preencha este campo.'\n"
+              },
+              "uuid": "dd786320-7050-43f9-8ede-a3e31241b85c",
+              "parentUUID": "b01cf162-3b9b-476c-9843-f94c42f4a097",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "dd786320-7050-43f9-8ede-a3e31241b85c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10954,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-15T02:28:06.839Z",
+    "end": "2024-07-15T02:28:16.213Z",
+    "duration": 9374,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea0aaf1d-44fd-4d26-b55b-b83357ec5c0f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\editarUsuario.cy.js",
+      "file": "cypress\\e2e\\editarUsuario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9bda7f49-5a66-4b82-b13f-3c1267a1afa6",
+          "title": "Editar cadastro do usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Clicar no botão de edição",
+              "fullTitle": "Editar cadastro do usuário Clicar no botão de edição",
+              "timedOut": null,
+              "duration": 6068,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('table tbody tr').last().find('button').first().click();",
+              "err": {},
+              "uuid": "3e43abaf-d059-4acd-bc00-1a88772ed6c8",
+              "parentUUID": "9bda7f49-5a66-4b82-b13f-3c1267a1afa6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e43abaf-d059-4acd-bc00-1a88772ed6c8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6068,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

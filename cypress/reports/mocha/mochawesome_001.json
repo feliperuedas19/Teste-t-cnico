@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-15T02:27:08.870Z",
+    "end": "2024-07-15T02:27:16.210Z",
+    "duration": 7340,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "200b71dd-fdf1-41d7-ae9e-2c2560adeca5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\adicionarMaisDeUmaEmpresa.cy.js",
+      "file": "cypress\\e2e\\adicionarMaisDeUmaEmpresa.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b593eeba-3725-4dfd-98a2-505033bf1e67",
+          "title": "Adicionar mais de uma empresa ao input",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Clicar no input de empresa e selecionar uma das empresas listadas, depois adicionar as outras duas restantes",
+              "fullTitle": "Adicionar mais de uma empresa ao input Clicar no input de empresa e selecionar uma das empresas listadas, depois adicionar as outras duas restantes",
+              "timedOut": null,
+              "duration": 3915,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('button').contains('Novo Usuário').click();\ncy.get('#search_input').click();\ncy.get('.optionContainer').contains('li', 'Empresa 1').click();\ncy.get('.optionContainer').contains('li', 'Empresa 2').click();\ncy.get('.optionContainer').contains('li', 'Empresa 3').click();\ncy.get('.search-wrapper > :nth-child(1)').should('have.text', 'Empresa 1');\ncy.get('.search-wrapper > :nth-child(2)').should('have.text', 'Empresa 2');\ncy.get('.search-wrapper > :nth-child(3)').should('have.text', 'Empresa 3');\ncy.get('.optionContainer').children('li').should('have.length', 0);\ncy.get('.optionContainer').contains('span', 'Nenhum resultado correspondente...');",
+              "err": {},
+              "uuid": "d9c668b1-7e4e-487c-a091-bb80288f8ac5",
+              "parentUUID": "b593eeba-3725-4dfd-98a2-505033bf1e67",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d9c668b1-7e4e-487c-a091-bb80288f8ac5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3915,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

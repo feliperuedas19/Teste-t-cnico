@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-07-15T02:27:20.449Z",
+    "end": "2024-07-15T02:27:38.784Z",
+    "duration": 18335,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "304ceca3-2588-4561-824b-955bb750f643",
+      "title": "",
+      "fullFile": "cypress\\e2e\\adicionarUmNovoUsuario.cy.js",
+      "file": "cypress\\e2e\\adicionarUmNovoUsuario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2b0afce1-1d09-491a-a1d7-9602f7067413",
+          "title": "Adicionar Novo Usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve fazer o preenchimentos dos campos e salvar ",
+              "fullTitle": "Adicionar Novo Usuário Deve fazer o preenchimentos dos campos e salvar ",
+              "timedOut": null,
+              "duration": 14476,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[placeholder=\"Nome\"]').type('Usuário teste09');\ncy.get('[placeholder=\"Email\"]').type('meuemaildeteste09@email.com');\ncy.get('[placeholder=\"Telefone\"]').type('12111445577');\ncy.get('[placeholder=\"Cidade de nascimento\"]').type('Belem');\ncy.get('[placeholder=\"Data de nascimento\"]').type('2000-01-01');\ncy.get('#search_input').click();\ncy.get('.optionContainer').contains('li', 'Empresa 1').click();\ncy.get('[placeholder=\"Nome\"]').click();\ncy.get('.sc-eCImPb > button').click();\ncy.reload();\ncy.get('table tbody tr').last().within(() => {\n  cy.get('td').each(($td, index) => {\n    const expectedValues = ['Usuário teste09', 'meuemaildeteste09@email.com', '12111445577', '01/01/2000', 'Belem', 'Compliance St...'];\n    if (index < 6) {\n      cy.wrap($td).should('contain', expectedValues[index], {\n        timeout: 10000\n      });\n    }\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<td>' to contain '01/01/2000'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<td>' to contain '01/01/2000'\n    at Context.eval (webpack:///./cypress/e2e/adicionarUmNovoUsuario.cy.js:30:25)",
+                "diff": null
+              },
+              "uuid": "b3450961-9a52-4866-9918-49802b1601cc",
+              "parentUUID": "2b0afce1-1d09-491a-a1d7-9602f7067413",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b3450961-9a52-4866-9918-49802b1601cc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14476,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
